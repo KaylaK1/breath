@@ -30,14 +30,14 @@ It seems like cases of misconduct go unpunished. This is a website that allows c
       * View a timeline of events
       * View local contacts for advocacy
 * As an Engineer, I want:
-      * A deployed dockerized site
-      * At least three instances: Luis Monsanto, George Floyd, Breonna Taylor
-      * Protected routes and server configuration
+    * A deployed dockerized site
+  * At least three instances: Luis Monsanto, George Floyd, Breonna Taylor
+  * Protected routes and server configuration
 * Tier 2 Goals
   * As a User I want to be able to:
     * Report instances, case updates, additional resources for others
     * As an Administrator (referee), I want to be able to:
     * Review user submissions
-*As an Engineer, I want:
+* As an Engineer, I want:
     * Filter user submissions for malicious content.
     * Anonymize User submission source depending on method
