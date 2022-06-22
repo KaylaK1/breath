@@ -26,7 +26,7 @@ It seems like cases of misconduct go unpunished. This is a website that allows c
 
 * Tier 1 Goals
    * As a User I want to be able to:
-   * View instances of police behavior
+   *  View instances of police behavior
    * View a timeline of events
    * View local contacts for advocacy
 * As an Engineer, I want:
