@@ -1,3 +1,42 @@
-body {
-  color: darkblue;
+#desktop-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 32px;
+  gap: 32px;
+
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+
+#site-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  height: 40px;
+
+  /** inside auto layout **/
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#site-header-bar {
+  width: 228px;
+  height: 40px;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000000;
+
+  /** inside auto layout **/
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
