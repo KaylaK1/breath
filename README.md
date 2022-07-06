@@ -2,8 +2,6 @@
 
 <p align="center">
   <img src="https://i.postimg.cc/NfBjCdH8/mobile-Example.png" />
-</p>
-<p align="center">
   <img src="https://i.postimg.cc/dtpStxjr/web-Example.png" />
 </p>
 
