@@ -1,7 +1,13 @@
 # Breath
----
-[![mobile-Example.png](https://i.postimg.cc/NfBjCdH8/mobile-Example.png)](https://postimg.cc/Bt73XcNt)
-[![web-Example.png](https://i.postimg.cc/dtpStxjr/web-Example.png)](https://postimg.cc/cr7cFTjL)
+
+<p align="center">
+  <img src="https://i.postimg.cc/NfBjCdH8/mobile-Example.png" />
+</p>
+<p align="center">
+  <img src="https://i.postimg.cc/dtpStxjr/web-Example.png" />
+</p>
+
+
 Figma Design: [Link](https://www.figma.com/file/CfhPAHJywM5J8iAPk4k0ph/wireframe-and-mockup)
 
 
