@@ -1,12 +1,9 @@
-import React from "react"
-import HeaderBar from "./HeaderBar"
+import styled from 'styled-components';
 
 const App = () => {
   return (
-    <div id="desktop-main-container">
-      <HeaderBar />
-    </div>
+    <>Working...</>
   )
 }
 
-export default App
+export default App;
