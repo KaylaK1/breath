@@ -1,42 +1,26 @@
-#desktop-main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px 32px;
-  gap: 32px;
+/*
+  start with no default padding or margins
+  set the width and height to fill the screen.
+  set the flex basis to 100% so the size of the
+  flex container is 100% along the horizontal axis.
+  (since flex-direction is row by default if not defined).
 
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
+  flex-basis sets the initial size (like min-width/height).
+  It's final size will be based on: available space, and the
+  flex-grow/shrink multiples (when more than one item exists).
+*/
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
 }
 
-#site-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  height: 40px;
-
-  /** inside auto layout **/
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-#site-header-bar {
-  width: 228px;
-  height: 40px;
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  color: #000000;
-
-  /** inside auto layout **/
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+/* */
+#root {
+  position: relative;
 }
