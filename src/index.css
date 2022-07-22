@@ -3,6 +3,8 @@
   set the width and height to fill the screen.
   set the flex basis to 100% so the size of the
   flex container is 100% along the horizontal axis.
+  (flex-basis is like min-width)
+
   (since flex-direction is row by default if not defined).
 
   flex-basis sets the initial size (like min-width/height).
@@ -20,7 +22,14 @@ body,
   width: 100%;
 }
 
-/* */
+/*
+ default: static: positioned according to the normal flow of the document,
+ and positioners have no effect
+
+  positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements
+
+  read also stacking context
+*/
 #root {
   position: relative;
 }
