@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const HeaderBar = (): JSX.Element => {
+  return (
+    <div>
+
+    </div>
+  );
+}
+
 export const ImageCard = styled.div`
 display: flex;
 flex-direction: row;
