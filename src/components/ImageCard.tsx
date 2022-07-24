@@ -1,14 +1,42 @@
+import { HTMLAttributes } from "react";
 import styled from "styled-components";
+// interface ImageCardData extends HTMLAttributes<HTMLHeadingElement> {
+//   data: {
+//   // personId: number;
+//   // imgPath: string;
+//   name: string;
+//   // date: string;
+//   // location: string;
+//   // description: string;
+//   };
+//   as?: keyof JSX.IntrinsicElements // Note the keyof!
+// }
+interface ImageCardProps {
+  data: {
+    name: string;
+  };
 
-const HeaderBar = (): JSX.Element => {
+}
+// query and pass in only a portion of the details
+// description?
+// then if the user clicks more info, pass in ImageCardProps
+// then query for the full details object?
+// export const ImageCard = ({data}: ImageCardData, { className }: { className: string }): JSX.Element => {
+//   return (
+//     <div className={className}>
+//       <ImageName>{data.name}</ImageName>
+//     </div>
+//   );
+// }
+export const ImageCard = ({data}: ImageCardProps, { className }: { className: string }): JSX.Element => {
   return (
-    <div>
-
+    <div className={className}>
+      <ImageName>{data.name}</ImageName>
     </div>
   );
 }
-
-export const ImageCard = styled.div`
+// styled(ImageCard)<ImageCardData>
+export const StyledImageCard = styled.div<ImageCardProps>`
 display: flex;
 flex-direction: row;
 align-items: flex-end;
@@ -40,7 +68,7 @@ align-self: stretch;
 flex-grow: 0;
 `;
 
-export const ImageName = styled.div`
+const ImageName = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

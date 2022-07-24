@@ -1,23 +1,19 @@
 import styled from 'styled-components';
 import StyledSiteHeader from './components/HeaderBar';
-import { ImageCard, ImageName } from './components/ImageCard';
+import { StyledImageCard, ImageCard } from './components/ImageCard';
+
+
 
 const App = () => {
+  const obj = {
+    name: 'test'
+  };
+
   return (
     <Container>
       <StyledSiteHeader className=''/>
-      <ImageCard>
-        <ImageName>Luis Monsanto</ImageName>
-      </ImageCard>
-      <ImageCard>
-        <ImageName>Luis Monsanto</ImageName>
-      </ImageCard>
-      <ImageCard>
-        <ImageName>Luis Monsanto</ImageName>
-      </ImageCard>
-      <ImageCard>
-        <ImageName>Luis Monsanto</ImageName>
-      </ImageCard>
+      {/* <ImageCard data={obj}/> */}
+      <StyledImageCard data={obj} className='' />
     </Container>
   )
 }
