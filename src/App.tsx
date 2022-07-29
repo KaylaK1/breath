@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import StyledSiteHeader from './components/HeaderBar';
 import { StyledImageCard, ImageCard } from './components/ImageCard';
 
-
-
 const App = () => {
   const obj = {
     name: 'test'
@@ -12,7 +10,6 @@ const App = () => {
   return (
     <Container>
       <StyledSiteHeader className=''/>
-      {/* <ImageCard data={obj}/> */}
       <StyledImageCard data={obj} className='' />
     </Container>
   )
@@ -40,4 +37,5 @@ const Container = styled.section`
   height: 100%;
   flex: 1;
   overflow-y: auto;
+  color: ${props => props.theme.colors.textColor};
 `;

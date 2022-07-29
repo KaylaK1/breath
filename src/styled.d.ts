@@ -7,6 +7,10 @@ import 'styled-components';
 // By default the DefaultTheme interface is empty - so thats why we need to extend it.
 declare module 'styled-components' {
   export interface DefaultTheme {
-    className: string;
+    colors: {
+      textColor: string;
+      inactive: string;
+      borderColor: string;
+    };
   }
 }

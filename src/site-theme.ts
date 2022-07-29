@@ -1,14 +1,13 @@
 // // create a theme using DefaultTheme which we typed in styled.d.ts
-// import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from "styled-components";
 
-// const siteTheme: DefaultTheme = {
-//   borderRadius: '5px',
+const siteTheme: DefaultTheme = {
 
-//   colors: {
-//     main: 'cyan',
-//     secondary: 'magenta',
-//   },
-// };
+  colors: {
+    textColor: '#F3F3F',
+    inactive: '#8A8C99',
+    borderColor: '#FBEE1F',
+  },
+};
 
-// export { siteTheme };
-export {};
+export { siteTheme };
