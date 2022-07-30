@@ -7,16 +7,13 @@ interface ImageCardProps {
   className: string;
 }
 
-export const ImageCard = ({data}: ImageCardProps, className: string): JSX.Element => {
+export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
   return (
     <div className={className}>
-
-    <Image />
-    <NameRow>
-      <ImageName>Luis Monsanto</ImageName>
-    </NameRow>
-
-
+      <Image />
+      <NameRow>
+        <ImageName>{data.name}</ImageName>
+      </NameRow>
     </div>
   );
 }
@@ -33,16 +30,18 @@ export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
 `;
 
 const Image = styled.div`
-  flex-basis: 100%;
+  min-width: 250px;
+  min-height: 150px;
   --ratio: 150/250;
   --container-width: 100%;
   height: calc(100vw * var(--ratio));
+
   background: url(luis.png);
   background-size: contain;
-background-repeat: no-repeat;
-background-position: center center;
-  /* align-self: stretch;
-  flex-grow: 0; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-self: stretch;
+  /* flex-grow: 0; */
 `;
 const NameRow = styled.div`
   display: flex;
@@ -55,12 +54,9 @@ const NameRow = styled.div`
     align-self: stretch;
     flex-grow: 1;
   };
+
+
 `;
 const ImageName = styled.div`
-font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 700;
-font-size: 1.563rem;
 line-height: 30px;
-/* color: ${props => props.theme.colors.borderColor}; */
 `;

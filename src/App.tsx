@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import StyledSiteHeader from './components/HeaderBar';
 import { StyledImageCard, ImageCard } from './components/ImageCard';
-
+import sourceSansPro900 from "./fonts/source-sans-pro-v21-latin-900.woff2";
+import sourceSansProRegular from "./fonts/source-sans-pro-v21-latin-regular.woff2";
 const App = () => {
   const obj = {
-    name: 'test'
+    name: 'Luis Monsanto'
   };
 
   return (
@@ -25,13 +26,22 @@ const Container = styled.section`
   padding: 0px 8px;
   gap: 16px;
 
-  position: absolute;
+  /* position: absolute;
   left: 0px;
   right: 0px;
-  top: 0px;
+  top: 0px; */
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;700&display=swap');
-  font-family: 'Source Sans Pro';
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url(${sourceSansPro900}) format('woff2');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro Regular';
+    src: url(${sourceSansProRegular}) format('woff2');
+  }
+  /* font-family: ${props => props.theme.fonts.mediumTitle.fontFamily}; */
+
+
 
   flex-basis: 100%;
   height: 100%;

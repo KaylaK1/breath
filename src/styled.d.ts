@@ -12,5 +12,20 @@ declare module 'styled-components' {
       inactive: string;
       borderColor: string;
     };
+    fonts: {
+      largeTitle: FontFamily;
+       mediumTitle: FontFamily;
+      // mediumText: FontFace;
+      // smallTitle: FontFace;
+      // bodyText: FontFace;
+      // captionText: FontFace;
+    }
   }
+}
+
+// font-family interface
+interface FontFamily {
+  fontSource?: string;
+  fontFamily: string;
+  fontSize: string;
 }
