@@ -23,7 +23,7 @@ export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  border-width: 1px 0px;
+  border-width: 2px 0px;
   border-style: solid;
   border-color: #FBEE1F;
   border-radius: 5px;
@@ -41,7 +41,7 @@ const Image = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   align-self: stretch;
-  /* flex-grow: 0; */
+  flex-grow: 0;
 `;
 const NameRow = styled.div`
   display: flex;
