@@ -7,15 +7,24 @@ import sourceSansPro300 from "./fonts/source-sans-pro-v21-latin-300.woff2";
 
 const App = () => {
   const obj = {
-    name: 'Luis Monsanto'
+    id: '100',
+    name: 'Luis Monsanto',
+  };
+  const obj2 = {
+    id: '101',
+    name: 'Luis Monsanto',
+  };
+  const obj3 = {
+    id: '102',
+    name: 'Luis Monsanto',
   };
 
   return (
     <Container>
       <StyledSiteHeader className=''/>
       <StyledImageCard data={obj} className='' />
-      <StyledImageCard data={obj} className='' />
-      <StyledImageCard data={obj} className='' />
+      <StyledImageCard data={obj2} className='' />
+      <StyledImageCard data={obj3} className='' />
     </Container>
   )
 }
@@ -52,8 +61,8 @@ const Container = styled.section`
 
   a:link, a:visited, a:hover, a:active {
     text-decoration: none;
-    font-family: ${props => props.theme.fonts.smallTitle.fontFamily}
-    color: ${props => props.theme.colors.textColor};
+    font-family: ${props => props.theme.fonts.smallTitle.fontFamily};
+    background-color: ${props => props.theme.colors.borderColor};
   }
 
 `;

@@ -17,6 +17,7 @@ font-size: 1.953rem;
 font-weight: 700;
 align-self: stretch;
 flex-grow: 0;
+color: black;
 `;
 
 export default StyledSiteHeader;

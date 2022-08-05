@@ -1,7 +1,9 @@
+import { NONAME } from "dns";
 import { HTMLAttributes } from "react";
 import styled, { createGlobalStyle, css, ThemeProvider } from "styled-components";
 interface ImageCardProps {
   data: {
+    id: string;
     name: string;
   };
   className: string;
@@ -13,9 +15,9 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
       <Image />
       <NameRow>
         <ImageName>{data.name}</ImageName>
-        <span><a href="" onClick={() => toggleInfo()}>Expand</a></span>
+        <span onClick={() => toggleInfo(data.id)}>Expand</span>
       </NameRow>
-      <ExpandedInfo id='expandedInfo'>
+      <ExpandedInfo id={data.id} style={displayStyle} >
           <span>Details</span>
           <div>
             <span>Date: </span><span>01/01/2022</span>
@@ -30,9 +32,13 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
   );
 }
 
-const toggleInfo = (): void => {
-  const expandedInfo = document.getElementById('expandedInfo');
-  expandedInfo?.style.display === 'none' ? 
+const displayStyle = {
+  display: 'none',
+} as const;
+
+const toggleInfo = (id: string): void => {
+  const expandedInfo = document.getElementById(`${id}`);
+  expandedInfo?.style.display === 'none' ?
   expandedInfo.style.display = 'flex' : expandedInfo!.style.display = 'none';
 }
 

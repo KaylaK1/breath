@@ -7,7 +7,7 @@ import { url } from "inspector";
 
 const siteTheme: DefaultTheme = {
   colors: {
-    textColor: '#F3F3F',
+    textColor: '#313131',
     inactive: '#8A8C99',
     borderColor: '#FBEE1F',
   },
