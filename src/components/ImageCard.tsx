@@ -1,6 +1,4 @@
-import { NONAME } from "dns";
-import { HTMLAttributes } from "react";
-import styled, { createGlobalStyle, css, ThemeProvider } from "styled-components";
+import styled from "styled-components";
 interface ImageCardProps {
   data: {
     id: string;
@@ -42,7 +40,7 @@ const toggleInfo = (id: string): void => {
   expandedInfo.style.display = 'flex' : expandedInfo!.style.display = 'none';
 }
 
-const ExpandedInfo = styled.div`
+export const ExpandedInfo = styled.div`
   display: none;
   flex-direction: column;
   gap: 8px;
@@ -66,7 +64,7 @@ export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
   flex-grow: 1;
 `;
 
-const Image = styled.div`
+export const Image = styled.div`
   min-width: 350px;
   min-height: 200px;
   background: url(luis.png);
@@ -74,7 +72,7 @@ const Image = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
 `;
-const NameRow = styled.div`
+export const NameRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +80,7 @@ const NameRow = styled.div`
     font-family: '${props => props.theme.fonts.captionText.fontFamily}';
   }
 `;
-const ImageName = styled.div`
+export const ImageName = styled.div`
   line-height: 30px;
   font-family: '${props => props.theme.fonts.largeTitle.fontFamily}';
   font-size: ${props => props.theme.fonts.largeTitle.fontSize};
