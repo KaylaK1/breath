@@ -14,9 +14,21 @@ const siteTheme: DefaultTheme = {
   fonts: {
     largeTitle: {
       fontFamily: 'Source Sans Pro 900',
-      fontSize: '1.5rem',
+      fontSize: '1.953rem',
     },
     mediumTitle: {
+      fontFamily: 'Source Sans Pro 900',
+      fontSize: '1.563rem',
+    },
+    mediumText: {
+      fontFamily: 'Source Sans Pro',
+      fontSize: '1.563rem',
+    },
+    smallTitle: {
+      fontFamily: 'Source Sans Pro 900',
+      fontSize: '1rem',
+    },
+    bodyText: {
       fontFamily: 'Source Sans Pro',
       fontSize: '1rem',
     },

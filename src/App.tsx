@@ -43,9 +43,17 @@ const Container = styled.section`
     src: url(${sourceSansPro300}) format('woff2');
   }
 
+  font-family: ${props => props.theme.fonts.bodyText.fontFamily};
   flex-basis: 100%;
   height: 100%;
   flex: 1;
   /* overflow-y: auto; */
   color: ${props => props.theme.colors.textColor};
+
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    font-family: ${props => props.theme.fonts.smallTitle.fontFamily}
+    color: ${props => props.theme.colors.textColor};
+  }
+
 `;

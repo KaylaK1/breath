@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const HeaderBar = ({ className }: { className: string }): JSX.Element => {
   return (
     <div className={className}>
-      ICantBreath.org
+      Breath
     </div>
   );
 }

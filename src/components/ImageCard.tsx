@@ -13,12 +13,41 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
       <Image />
       <NameRow>
         <ImageName>{data.name}</ImageName>
-        <span>expand</span>
+        <span><a href="" onClick={() => toggleInfo()}>Expand</a></span>
       </NameRow>
+      <ExpandedInfo id='expandedInfo'>
+          <span>Details</span>
+          <div>
+            <span>Date: </span><span>01/01/2022</span>
+          </div>
+          <div>
+            <span>Location: </span><span>NYC</span>
+          </div>
+          <p>Short explaination about the person.</p>
+          <span><a href="#">More Info</a></span>
+        </ExpandedInfo>
     </div>
   );
 }
-// styled(ImageCard)<ImageCardData>
+
+const toggleInfo = (): void => {
+  const expandedInfo = document.getElementById('expandedInfo');
+  expandedInfo?.style.display === 'none' ? 
+  expandedInfo.style.display = 'flex' : expandedInfo!.style.display = 'none';
+}
+
+const ExpandedInfo = styled.div`
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  span:nth-of-type(1) {
+    font-family: '${props => props.theme.fonts.smallTitle.fontFamily}';
+  }
+  div {
+    flex-direction: row;
+   }
+`;
+
 export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
   display: flex;
   flex-direction: column;

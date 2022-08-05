@@ -15,9 +15,9 @@ declare module 'styled-components' {
     fonts: {
       largeTitle: FontFamily;
       mediumTitle: FontFamily;
-      // mediumText: FontFace;
-      // smallTitle: FontFace;
-      // bodyText: FontFace;
+      mediumText: FontFamily;
+      smallTitle: FontFamily;
+      bodyText: FontFamily;
       captionText: FontFamily;
     }
   }
