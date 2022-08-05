@@ -14,18 +14,17 @@ declare module 'styled-components' {
     };
     fonts: {
       largeTitle: FontFamily;
-       mediumTitle: FontFamily;
+      mediumTitle: FontFamily;
       // mediumText: FontFace;
       // smallTitle: FontFace;
       // bodyText: FontFace;
-      // captionText: FontFace;
+      captionText: FontFamily;
     }
   }
 }
 
 // font-family interface
 interface FontFamily {
-  fontSource?: string;
   fontFamily: string;
   fontSize: string;
 }

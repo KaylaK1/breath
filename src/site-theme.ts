@@ -13,14 +13,17 @@ const siteTheme: DefaultTheme = {
   },
   fonts: {
     largeTitle: {
-      fontSource: sourceSansPro900,
-      fontFamily: 'Times New Roman',
-      fontSize: '3rem',
+      fontFamily: 'Source Sans Pro 900',
+      fontSize: '1.5rem',
     },
     mediumTitle: {
       fontFamily: 'Source Sans Pro',
-      fontSize: '3rem',
-    }
+      fontSize: '1rem',
+    },
+    captionText: {
+      fontFamily: 'Source Sans Pro 300',
+      fontSize: '1rem',
+    },
   }
 };
 

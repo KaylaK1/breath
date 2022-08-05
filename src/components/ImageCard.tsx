@@ -13,6 +13,7 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
       <Image />
       <NameRow>
         <ImageName>{data.name}</ImageName>
+        <span>expand</span>
       </NameRow>
     </div>
   );
@@ -21,42 +22,33 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
 export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 8px;
-  border-width: 2px 0px;
+  border-width: 1px 0px;
   border-style: solid;
   border-color: #FBEE1F;
   border-radius: 5px;
+  padding: 8px;
+  flex-grow: 1;
 `;
 
 const Image = styled.div`
-  min-width: 250px;
-  min-height: 150px;
-  --ratio: 150/250;
-  --container-width: 100%;
-  height: calc(100vw * var(--ratio));
-
+  min-width: 350px;
+  min-height: 200px;
   background: url(luis.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  align-self: stretch;
-  flex-grow: 0;
 `;
 const NameRow = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0px;
-  > * {
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 1;
-  };
-
-
+  justify-content: space-between;
+  align-items: center;
+  :nth-of-type(2) {
+    font-family: '${props => props.theme.fonts.captionText.fontFamily}';
+  }
 `;
 const ImageName = styled.div`
-line-height: 30px;
+  line-height: 30px;
+  font-family: '${props => props.theme.fonts.largeTitle.fontFamily}';
+  font-size: ${props => props.theme.fonts.largeTitle.fontSize};
 `;
