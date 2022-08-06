@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import StyledSiteHeader from './components/HeaderBar';
 import { StyledImageCard, ImageCard } from './components/ImageCard';
+import { SinglePersonView } from './components/SinglePersonView';
 import sourceSansPro900 from "./fonts/source-sans-pro-v21-latin-900.woff2";
 import sourceSansProRegular from "./fonts/source-sans-pro-v21-latin-regular.woff2";
 import sourceSansPro300 from "./fonts/source-sans-pro-v21-latin-300.woff2";
@@ -22,9 +23,10 @@ const App = () => {
   return (
     <Container>
       <StyledSiteHeader className=''/>
-      <StyledImageCard data={obj} className='' />
+      <SinglePersonView data={obj} className=''/>
+      {/* <StyledImageCard data={obj} className='' />
       <StyledImageCard data={obj2} className='' />
-      <StyledImageCard data={obj3} className='' />
+      <StyledImageCard data={obj3} className='' /> */}
     </Container>
   )
 }

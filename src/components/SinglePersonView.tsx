@@ -3,12 +3,15 @@ import {StyledImageCard, Image, NameRow, ImageName, ExpandedInfo} from "./ImageC
 import { ImageCardProps } from "./ImageCard";
 
 // extend ImageCardProps then switch on line 11
-interface SingleViewProps {
-  data: {};
-  className: string;
+interface SingleViewProps extends ImageCardProps {
+  
 }
-
-const SingleView =({data, className}: ImageCardProps): JSX.Element => {
+const obj = {
+  id: '100',
+  name: 'Luis Monsanto',
+};
+// call styledImage Card with the data. Then Call other Props?
+export const SinglePersonView = ({data, className}: SingleViewProps): JSX.Element => {
   return (
     <div className={className}>
       <Image />
@@ -25,9 +28,11 @@ const SingleView =({data, className}: ImageCardProps): JSX.Element => {
           </div>
           <p>Long explaination about the person.</p>
         </ExpandedInfo>
-    </div>
+      
+     </div>
   );
 }
+
 
 // Current Status
 

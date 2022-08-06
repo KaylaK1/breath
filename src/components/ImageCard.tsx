@@ -1,5 +1,5 @@
 import styled from "styled-components";
-interface ImageCardProps {
+export interface ImageCardProps {
   data: {
     id: string;
     name: string;
