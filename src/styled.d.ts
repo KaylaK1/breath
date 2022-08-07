@@ -7,6 +7,24 @@ import 'styled-components';
 // By default the DefaultTheme interface is empty - so thats why we need to extend it.
 declare module 'styled-components' {
   export interface DefaultTheme {
-    className: string;
+    colors: {
+      textColor: string;
+      inactive: string;
+      borderColor: string;
+    };
+    fonts: {
+      largeTitle: FontFamily;
+      mediumTitle: FontFamily;
+      mediumText: FontFamily;
+      smallTitle: FontFamily;
+      bodyText: FontFamily;
+      captionText: FontFamily;
+    }
   }
+}
+
+// font-family interface
+interface FontFamily {
+  fontFamily: string;
+  fontSize: string;
 }
