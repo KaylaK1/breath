@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import StyledSiteHeader from './components/HeaderBar';
-import { StyledImageCard, ImageCard } from './components/ImageCard';
+import { ImageCard } from './components/ImageCard';
 import { SinglePersonView } from './components/SinglePersonView';
 import sourceSansPro900 from "./fonts/source-sans-pro-v21-latin-900.woff2";
 import sourceSansProRegular from "./fonts/source-sans-pro-v21-latin-regular.woff2";
@@ -24,6 +24,7 @@ const App = () => {
     <Container>
       <StyledSiteHeader className=''/>
       <SinglePersonView data={obj} className=''/>
+      {/* <ImageCard data={obj} className='' /> */}
       {/* <StyledImageCard data={obj} className='' />
       <StyledImageCard data={obj2} className='' />
       <StyledImageCard data={obj3} className='' /> */}
@@ -65,6 +66,25 @@ const Container = styled.section`
     text-decoration: none;
     font-family: ${props => props.theme.fonts.smallTitle.fontFamily};
     background-color: ${props => props.theme.colors.borderColor};
+  }
+
+  h1, h2,h3, h4 {
+    margin: 0 0 0 0;
+  }
+  h1 {
+
+  }
+
+  h2 {
+    font-size: ${props => props.theme.fonts.mediumTitle.fontSize};
+  }
+
+  h3 {
+
+  }
+
+  p {
+    margin: 0;
   }
 
 `;

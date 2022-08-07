@@ -9,7 +9,7 @@ export interface ImageCardProps {
 
 export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
   return (
-    <div className={className}>
+    <StyledContainer className={className}>
       <Image />
       <NameRow>
         <ImageName>{data.name}</ImageName>
@@ -26,13 +26,13 @@ export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
           <p>Short explaination about the person.</p>
           <span><a href="#">More Info</a></span>
         </ExpandedInfo>
-    </div>
+    </StyledContainer>
   );
 }
 
-const displayStyle = {
+export let displayStyle = {
   display: 'none',
-} as const;
+};
 
 const toggleInfo = (id: string): void => {
   const expandedInfo = document.getElementById(`${id}`);
@@ -40,7 +40,7 @@ const toggleInfo = (id: string): void => {
   expandedInfo.style.display = 'flex' : expandedInfo!.style.display = 'none';
 }
 
-export const ExpandedInfo = styled.div`
+export const ExpandedInfo = styled.section`
   display: none;
   flex-direction: column;
   gap: 8px;
@@ -52,15 +52,15 @@ export const ExpandedInfo = styled.div`
    }
 `;
 
-export const StyledImageCard = styled(ImageCard)<ImageCardProps>`
+export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 24px;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #FBEE1F;
   border-radius: 5px;
-  padding: 8px;
+  padding-top: 8px;
   flex-grow: 1;
 `;
 
