@@ -5,7 +5,7 @@ export interface ImageCardProps {
     name: string;
   };
   className: string;
-}
+};
 
 export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
   return (

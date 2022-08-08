@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StyledContainer, Image, NameRow, ImageName, ExpandedInfo, displayStyle} from "./ImageCard";
 import { ImageCardProps } from "./ImageCard";
-
+import EventTimeLine from "./EventTimeLine";
 // extend ImageCardProps then switch on line 11
 interface SingleViewProps extends ImageCardProps {
 
@@ -10,6 +10,17 @@ const obj = {
   id: '100',
   name: 'Luis Monsanto',
 };
+
+const timelineData = [{
+  date: '01/01/2022',
+  title: 'Event Title',
+  eventSource: 'www.google.com',
+}, {
+  date: '03/01/2022',
+  title: 'Event Title 2',
+  eventSource: 'www.yahoo.com',
+},
+];
 // call styledImage Card with the data. Then Call other Props?
 export const SinglePersonView = ({data, className}: SingleViewProps): JSX.Element => {
   return (
@@ -33,24 +44,7 @@ export const SinglePersonView = ({data, className}: SingleViewProps): JSX.Elemen
         <p>Officer Status</p>
       </CurrentStatus>
 
-      <EventTimeline>
-        <h2>Timeline</h2>
-        <Event>
-          <Date>01/01/22</Date>
-          <EventTitle>Latest Update on Case</EventTitle>
-          <EventSource>Source</EventSource>
-        </Event>
-        <Event>
-          <Date>01/01/22</Date>
-          <EventTitle>Latest Update on Case</EventTitle>
-          <EventSource>Source</EventSource>
-        </Event>
-        <Event>
-          <Date>01/01/22</Date>
-          <EventTitle>Latest Update on Case</EventTitle>
-          <EventSource>Source</EventSource>
-        </Event>
-      </EventTimeline>
+    <EventTimeLine data={timelineData} className=''/>
 
       <LocalContacts>
         <h2>Local Contacts</h2>
@@ -103,34 +97,3 @@ const CurrentStatus = styled.section`
 display: flex;
 flex-direction: column;
 gap: 8px;`;
-
-// Timeline
-const EventTimeline = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  align-self: stretch;
-`;
-const Event = styled.div`
-  display: flex;
-  align-items: center;
-  align-self: stretch;
-  padding: 0px;
-  gap: 8px;
-`;
-const Date = styled.div`
-  order: 0;
-  flex-grow: 0;
-`;
-const EventTitle = styled.div`
-  order: 1;
-  flex-grow: 1;
-`;
-const EventSource = styled.div`
-  order: 2;
-  flex-grow: 0;
-  font-family: '${props => props.theme.fonts.smallTitle.fontFamily}';
-`;
-
-
