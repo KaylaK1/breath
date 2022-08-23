@@ -3,34 +3,42 @@ import styled from  "styled-components";
 
 interface TimelineProps {
     date: string;
-    title: string;
-    eventSource: string;
+    // title: string;
+    // eventSource: string;
 };
 interface TimelineState {
-  timelineData: TimelineProps[];
+  timelineData: TimelineProps;
 };
+type MyState = {
+  count: number;
+}
 export default class EventTimeLine extends React.Component<{
   data: TimelineProps[],
-  className: string }, TimelineState> {
-  state: TimelineState = {
+  className: string }, MyState> {
+  state: MyState = {
     // optional second annotation for better type inference
-    timelineData: [{'1-1-1', 'hello', 'source'}],
+    count: 1,
   };
-  componentDidMount() {
-    this.setState((state){
-      timelineData:
-    });
+  componentWillMount() {
+    this.setState((state) => ({
+      count: 3,
+    }));
     console.log(this.props.data);
-    console.log(this.state);
-  }
+    console.log('state: ', this.state);
+  };
 
+  componentDidMount() {
+    this.setState( {
+      count: 999
+    });
+  };
   render() {
 
     return (
       <EventTimeline>
       <h2>Timeline</h2>
       <Event>
-        <Date>{this.state.timelineData[0].date}</Date>
+        <Date></Date>
         <EventTitle>Latest Update on Case</EventTitle>
         <EventSource>Source</EventSource>
       </Event>

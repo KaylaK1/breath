@@ -1,27 +1,38 @@
 import styled from "styled-components";
+import Luis from './luis.png';
+//const Luis = './luis.png';
+
 export interface ImageCardProps {
+  
   data: {
-    id: string;
+    id: number;
     name: string;
-  };
+    location: string;
+  }
   className: string;
 };
 
 export const ImageCard = ({data, className}: ImageCardProps): JSX.Element => {
+  const personId = String(data.id);
+  const [name, location] = [ data.name, data.location ];
+  
+  Image.defaultProps = {
+    src: Luis,
+  };
   return (
     <StyledContainer className={className}>
       <Image />
       <NameRow>
-        <ImageName>{data.name}</ImageName>
-        <span onClick={() => toggleInfo(data.id)}>Expand</span>
+        <ImageName>{name}</ImageName>
+        <span onClick={() => toggleInfo(personId)}>Expand</span>
       </NameRow>
-      <ExpandedInfo id={data.id} style={displayStyle} >
+      <ExpandedInfo id={personId} style={displayStyle} >
           <span>Details</span>
           <div>
             <span>Date: </span><span>01/01/2022</span>
           </div>
           <div>
-            <span>Location: </span><span>NYC</span>
+            <span>Location: </span><span>{location}</span>
           </div>
           <p>Short explaination about the person.</p>
           <span><a href="#">More Info</a></span>
@@ -63,11 +74,15 @@ export const StyledContainer = styled.div`
   padding-top: 8px;
   flex-grow: 1;
 `;
-
-export const Image = styled.div`
+/*
+Image.defaultProps = {
+  src: defaultImg,
+};
+*/
+export const Image = styled.img`
   min-width: 350px;
   min-height: 200px;
-  background: url(luis.png);
+  //background: url('${Luis}');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
