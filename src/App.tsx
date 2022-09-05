@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+// Allows links specific addresses
+import { Link } from 'react-router-dom';
+
 import StyledSiteHeader from './components/HeaderBar';
 import { ImageCard } from './components/ImageCard';
 // import { SinglePersonView } from './components/SinglePersonView';
@@ -47,7 +50,6 @@ const App = () => {
 
   return (
     <Container>
-      <StyledSiteHeader className=''/>
        {
          userData.map((user) => (
           <ImageCard key={user.id} data={user} className='' />
